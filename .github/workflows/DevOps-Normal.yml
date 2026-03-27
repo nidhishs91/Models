@@ -1,1 +1,27 @@
+ServiceNowDevOpsChange:
+  needs: build
+  runs-on: ubuntu-latest
+  name: "ServiceNow DevOps Change"
 
+  steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v4
+
+    - name: ServiceNow Change
+      uses: ServiceNow/servicenow-devops-change@v5.1.0
+      with:
+        # Basic Auth (You have username + password)
+        devops-integration-user: ${{ secrets.SN_DEVOPS_USER }}
+        devops-integration-password: ${{ secrets.SN_DEVOPS_PASSWORD }}
+
+        # Your SN instance
+        instance-url: ${{ secrets.SN_INSTANCE_URL }}
+
+        # Orchestration Tool (From ServiceNow)
+        tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
+
+        # GitHub context
+        context-github: ${{ toJSON(github) }}
+
+        # Job Display Name
+        job-name: "ServiceNow DevOps Change"
