@@ -10,7 +10,7 @@ permissions:
 jobs:
   ServiceNowDevOpsChange:
     runs-on: ubuntu-latest
-    name: DevOps (Normal) Change
+    name: ServiceNow DevOps Change (Prod Deploy)
 
     steps:
       # -----------------------------------
@@ -31,7 +31,7 @@ jobs:
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
-          job-name: "DevOps (Normal) Change"
+          job-name: "ServiceNow DevOps Change (Prod Deploy)"
 
           change-request: >
             {
