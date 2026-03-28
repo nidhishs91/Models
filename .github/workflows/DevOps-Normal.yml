@@ -37,15 +37,7 @@ jobs:
             {
               "autoCloseChange": "true",
               "attributes": {
-                "short_description": "Test 123",
-                "description": "Production change?\n\nQuality of plans: Implementation, Rollback, Test, Validation & communication\n\nService Disruption expected?\n\nTests successful\n\nTechnical Approvals to deploy in prod\n\nProduct owner approval\n\nSecurity Approval (assessment)\n\nChange successful before\n\nTime for Rollback? Longer time means more risk",
-                "service_offering": "fe2c2286a8e3e210e2ca594979e38503",
-                "requested_by": "7bb874b897b34610cc5331200153afa7",
-                "u_affected_customers": "07e79318db1cd110761e5fc4e2961901",
-                "u_detailed_validation_steps": "Test",
-                "u_communication_plan": "Test",
-                "start_date": "2026-03-27 03:23:44",
-                "end_date": "2026-03-27 03:23:50"
+                "short_description": "Test 123"
               }
             }
 
